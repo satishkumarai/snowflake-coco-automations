@@ -1,0 +1,10 @@
+{
+  "pre_run_hook": {
+    "command": "pip install pandas==2.2.0 --quiet 2>/dev/null",
+    "timeout_seconds": 120
+  },
+  "post_run_hook": {
+    "command": "echo 'Run completed at '$(date -u +%Y-%m-%dT%H:%M:%SZ) > /workspace/last-run.txt",
+    "timeout_seconds": 30
+  }
+}

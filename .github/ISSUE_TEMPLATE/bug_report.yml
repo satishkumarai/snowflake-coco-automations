@@ -1,0 +1,59 @@
+name: Bug Report
+description: Report a bug in the automation patterns, SQL, or prompts.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug. Please provide as much detail as possible.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear description of what the bug is.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Run `cortex automation create ...`
+        2. Wait for scheduled execution
+        3. Check task history
+        4. See error
+    validations:
+      required: true
+
+  - type: input
+    id: snowflake-region
+    attributes:
+      label: Snowflake region
+      description: Which cloud region are you running in?
+      placeholder: "e.g., AWS us-west-2"
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What you expected to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What actually happened. Include error messages if available.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Any other context, screenshots, or thread transcripts.

@@ -1,0 +1,14 @@
+# Repository owners — review required for all PRs
+* @satishkumar-snowflake
+
+# SQL changes
+/sql/ @satishkumar-snowflake
+
+# Governance changes require explicit review
+/sql/governance/ @satishkumar-snowflake
+
+# Prompt changes
+/prompts/ @satishkumar-snowflake
+
+# CI/CD and GitHub configuration
+/.github/ @satishkumar-snowflake

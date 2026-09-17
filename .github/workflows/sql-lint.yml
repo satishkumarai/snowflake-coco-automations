@@ -1,0 +1,30 @@
+name: SQL Lint
+
+on:
+  push:
+    paths:
+      - 'sql/**/*.sql'
+  pull_request:
+    paths:
+      - 'sql/**/*.sql'
+
+permissions:
+  contents: read
+
+jobs:
+  sqlfluff:
+    name: SQLFluff Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install SQLFluff
+        run: pip install sqlfluff==3.2.0
+
+      - name: Lint SQL files
+        run: sqlfluff lint sql/ --dialect snowflake
